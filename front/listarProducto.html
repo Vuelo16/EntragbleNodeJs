@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Listar Productos</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper" style="background-color: cadetblue;">
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="listarUsuario.html">Usuarios</a></li>
+            <li><a href="listarProducto.html">Productos</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container">
+        <h3>Productos</h3>
+        
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Descripción
+                    </th>
+                    <th>
+                        Categoría
+                    </th>
+                    <th>
+                        Stock
+                    </th>
+                    <th>
+                        Stock mínimo
+                    </th>
+                    <th>
+                        Valor unitario
+                    </th>
+                    <th>
+                        Estado
+                    </th>
+                    <th>
+                        Acciones
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="contenido-prod">
+            </tbody>
+        </table>
+        <br>
+        <a href="./registrarProducto.html"><button class="btn waves-effect waves-light" type="button"
+                name="action">Agregar Producto
+                <i class="material-icons right"></i>
+            </button></a>
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="container">
+                <div class="row">
+                    <h3>Editar Producto</h3>
+                    <div class="col s12">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">add_circle_outline</i>
+                                    <input type="hidden" id ="_id" class="validate">
+                                    <input id="nombreProd" name="nombreProd" type="text" class="validate">
+                                    <label for="nombreProd">Nombre:</label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">add_circle_outline</i>
+                                    <input id="descripcion" name="descripcion" type="text" class="validate">
+                                    <label for="descripcion">Descripción:</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <select class="browser-default" id="categoria">
+                                        <option value="" disabled selected>Elija una categoría</option>
+                                        <option value="Lacteos">Lacteos</option>
+                                        <option value="Abarrotes">Abarrotes</option>
+                                        <option value="Aseo">Aseo</option>
+                                        <option value="Licores">Licores</option>
+                                      </select>
+                                </div>
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">equalizer</i>
+                                    <input id="stock" name="stock" type="number" class="validate">
+                                    <label for="stock">Stock:</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">equalizer</i>
+                                    <input id="stock_min" name="stock_min" type="number" class="validate">
+                                    <label for="stock_min">Stock mínimo:</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">monetization_on</i>
+                                    <input id="valor_uni" name="valor_uni" type="number" class="validate">
+                                    <label for="valor_uni">Valor unitario</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <select class="browser-default" id="estadoProd">
+                                        <option value="" disabled selected>Elija el estado</option>
+                                        <option value="true">Activo</option>
+                                        <option value="false">Inactivo</option>
+                                      </select>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-success" id="btn-actualizarProd">Actualizar</button>
+                                </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    </form>
+                </div>
+            </div>
+            <script src="js/funciones.js"></script>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal');
+           
+        });
+
+
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+    </script>
+    <script src="js/funciones.js"></script>
+    <br><br>
+    <footer class="page-footer" style="background-color: cadetblue;">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Valicor</h5>
+              <p class="grey-text text-lighten-4"></p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text"></h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+                <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2023 Valicor
+          <a class="grey-text text-lighten-4 right" href="#!"></a>
+          </div>
+        </div>
+      </footer>
+</body>
+
+</html>

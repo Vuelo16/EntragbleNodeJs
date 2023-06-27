@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>editar Usuario</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h3>Editar Usuario</h3>
+        <div class="col s12">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="nombre" name="nombre" type="text" class="validate">
+                        <label for="nombre">Nombre:</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select class="browser-default" id="rol">
+                            <option value="" disabled selected>Elija un rol</option>
+                            <option value="Admin">Administrador</option>
+                            <option value="Usuario">Usuario</option>
+                          </select>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input id="email" name="email" type="text" class="validate">
+                        <label for="email">Email:</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input id="telefono" name="telefono" type="number" class="validate">
+                        <label for="telefono">Teléfono:</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input id="contrasena" name="contrasena" type="password" class="validate">
+                        <label for="contrasena">Contraseña</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="confirmar" name="confirmar" type="password" class="validate">
+                        <label for="confirmar">Confirmar Contraseña</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select class="browser-default" id="estado">
+                            <option value="" disabled selected>Elija el estado</option>
+                            <option value="true">Activo</option>
+                            <option value="false">Inactivo</option>
+                          </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <button class="btn waves-effect waves-light" type="button" id="btn-actualizarUsu" name="btn-actualizarUsu">Actualizar
+        </button>
+    </div>
+    <script src="js/funciones.js"></script>
+    
+</body>
+
+</html>
