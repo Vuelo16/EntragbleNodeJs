@@ -1,5 +1,5 @@
-const url1 ='http://localhost:8084/api/usuario'
-const urlProd ='http://localhost:8084/api/producto'
+const url1 ='https://entregable-node-back.onrender.com/api/usuario'
+const urlProd ='https://entregable-node-back.onrender.com/api/producto'
 
 const listarUsuario = async () => {
     let body = document.getElementById('contenido-usu')
